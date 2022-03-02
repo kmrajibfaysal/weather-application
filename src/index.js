@@ -5,13 +5,18 @@ async function displayResults(city) {
 
     const res = await fetch(url);
     const data = await res.json();
+    console.log(data);
+    if (data.cod === '404') {
+        return;
+    }
     const tempUi = document.getElementById('temp-ui');
     tempUi.innerHTML = data.main.temp;
     const cityUi = document.querySelector('#cityUi');
     cityUi.innerHTML = data.name;
     const cloud = document.querySelector('.lead');
     cloud.innerHTML = data.weather[0].main;
-    console.log(data);
+    const img = document.querySelector('img');
+    img.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 }
 
 function main() {
