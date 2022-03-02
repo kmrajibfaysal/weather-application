@@ -1,0 +1,26 @@
+{
+  "name": "first_node_app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Your Name <yourEmail@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./src/style.css -o ./output/tailwind.css -w"
+  },
+  "dependencies": {
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.3.2",
+    "autoprefixer": "^10.4.1",
+    "postcss": "^8.4.5",
+    "prettier-plugin-tailwindcss": "^0.1.7",
+    "tailwindcss": "^3.0.15"
+  }
+}
